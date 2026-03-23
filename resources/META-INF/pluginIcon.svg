@@ -1,0 +1,15 @@
+<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Layer 1</title>
+  <g transform="translate(2 2) scale(0.9 0.9)" id="svg_1" stroke="null">
+   <text x="19.23889" y="30.55556" text-anchor="middle" font-family="JetBrains Mono, Segoe UI, Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="0.4" fill="#0d1117" opacity="0.18" id="svg_2" stroke="null">NS</text>
+   <g id="svg_3" stroke="null">
+    <text x="18.88889" y="30.15556" text-anchor="middle" font-family="JetBrains Mono, Segoe UI, Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="0.4" fill="#4EC9B0" id="svg_4" stroke="null">NS</text>
+    <text x="18.88889" y="30.15556" text-anchor="middle" font-family="JetBrains Mono, Segoe UI, Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="0.4" fill="#a9c7ff" opacity="0.16" id="svg_5" stroke="null">NS</text>
+   </g>
+   <rect x="0.23889" y="33.90556" width="38.3" height="4.5" fill="#0d1117" opacity="0.18" id="svg_6" stroke="null"/>
+   <rect x="-0.11111" y="33.55556" width="39" height="4.5" fill="#4EC9B0" id="svg_7" stroke="null"/>
+  </g>
+ </g>
+
+</svg>

@@ -1,0 +1,49 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.github.omostan.nightshade-theme</id>
+    <version>1.0.0</version>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-name -->
+    <name>Nightshade Theme</name>
+    <category>UI</category>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="stan@omotech.com" url="https://github.com/omostan/nightshade-theme">Stanley Omoregie</vendor>
+
+    <idea-version since-build="252.25557"/>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-description -->
+    <description><![CDATA[
+        <p><img src="https://raw.githubusercontent.com/omostan/nightshade-theme/main/resources/images/nightshadeTheme_dark.png" alt="Nightshade Theme Preview" width="400"/></p>
+        <p><b>Nightshade Theme</b> is a custom dark theme for JetBrains IDEs, inspired by the beauty of night and the elegance of shadows.</p>
+        <p><b>Features:</b></p>
+        <ul>
+            <li>Sleek, modern dark interface with deep purples and subtle highlights that improves long-session comfort and reduces eye strain.</li>
+            <li>Optimized syntax highlighting for clearer code scanning and faster understanding.</li>
+            <li>Modern, clean aesthetic design that keeps your workspace focused and visually consistent.</li>
+            <li>Compatible with all JetBrains IntelliJ IDEs.</li>
+            <li><b>FREE:</b> This plugin is free and always will be.</li>
+        </ul>
+        <p>For more information, visit <a href="https://github.com/omostan/nightshade-theme">Nightshade Theme</a>.</p>
+    ]]></description>
+
+    <!-- Short summary of new features and bugfixes in the latest plugin version.
+         Displayed on the Plugin Page and IDE Plugin Manager. Simple HTML elements can be included between <![CDATA[  ]]> tags. -->
+    <change-notes><![CDATA[
+        <b>1.0.0</b><br>
+        <ul>
+            <li>Initial release of the theme.</li>
+        </ul>
+    ]]></change-notes>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <themeProvider id="23b2ef42-7687-43b5-b7fc-15e4106133d2" path="theme/nightshade.theme.json"/>
+    </extensions>
+</idea-plugin>
