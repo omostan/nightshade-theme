@@ -17,7 +17,7 @@
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-description -->
     <description><![CDATA[
-        <p><img src="https://raw.githubusercontent.com/omostan/nightshade-theme/main/resources/images/nightshadeTheme_dark.png" alt="Nightshade Theme Preview" width="400"/></p>
+        <p><a href="https://raw.githubusercontent.com/omostan/nightshade-theme/main/resources/images/nightshadeTheme_dark.png"><img src="https://raw.githubusercontent.com/omostan/nightshade-theme/main/resources/images/nightshadeTheme_dark_thumb.png" alt="Nightshade Theme Preview" width="400"/></a></p>
         <p><b>Nightshade Theme</b> is a custom dark theme for JetBrains IDEs, inspired by the beauty of night and the elegance of shadows.</p>
         <p><b>Features:</b></p>
         <ul>
@@ -35,7 +35,13 @@
     <change-notes><![CDATA[
         <b>1.0.0</b><br>
         <ul>
-            <li>Initial release of the theme.</li>
+            <li>Initial release of Nightshade Theme with deep purple and elegant dark interface.</li>
+            <li>Added optimized syntax highlighting for improved code readability.</li>
+            <li>Designed for all JetBrains IntelliJ IDEs (2025.2+).</li>
+            <li>Added Marketplace-compliant description with clickable screenshot preview.</li>
+            <li>Optimized theme assets and created thumbnail preview for better preview experience.</li>
+            <li>Polished HTML markup for strict Marketplace compatibility.</li>
+            <li>Added comprehensive README with installation and feature documentation.</li>
         </ul>
     ]]></change-notes>
 
