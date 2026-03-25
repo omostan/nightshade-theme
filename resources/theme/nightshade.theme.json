@@ -2,7 +2,7 @@
   "name": "Nightshade",
   "author": "Stanley Omoregie",
   "dark": true,
-  "editorScheme": "/Nightshade.xml",
+  "editorScheme": "/nightshade.xml",
   "colors": {
     "mainBackground": "#0d1117",
     "mainBorder": "#30363d",
