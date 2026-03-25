@@ -4,8 +4,7 @@
 # Steps:
 #   1. Build the plugin with Gradle  → build/distributions/nightshade-*.zip
 #   2. Create a GitHub Release and attach the ZIP as a download asset.
-#   3. (Optional) Sign & publish to JetBrains Marketplace — uncomment the
-#      last two steps and configure the required repository secrets.
+#   3. Sign & publish to JetBrains Marketplace using configured GitHub Actions secrets.
 #
 # Required repository secrets (Settings → Secrets and variables → Actions):
 #   None required for the GitHub Release step.
@@ -17,15 +16,20 @@
 #   PUBLISH_TOKEN          — JetBrains Marketplace Hub permanent token
 #
 # How to trigger a release:
-#   git tag v1.0.0
-#   git push origin v1.0.0
+#   1. Update the pluginVersion in gradle.properties (for example: 1.0.2).
+#     a.) git add gradle.properties
+#     b.) git commit -m "chore: Release v1.0.2"
+#
+#   2. Create a tag that matches the pluginVersion with a 'v' prefix (for example: v1.0.2).
+#     a.) git tag v1.0.2
+#     b.) git push origin main --tags
 # ---------------------------------------------------------------------------
 name: Release
 
 on:
   push:
     tags:
-      - 'v1.0.1'
+      - 'v*'
 
 # Allow the job to create a GitHub Release and upload assets
 permissions:
@@ -68,7 +72,33 @@ jobs:
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
           echo "zip_name=nightshade-${VERSION}.zip" >> "$GITHUB_OUTPUT"
 
-      # ── 6. GitHub Release ─────────────────────────────────────────────────
+      # ── 6. Guard: Tag must match pluginVersion ────────────────────────────
+      - name: Validate tag matches pluginVersion
+        run: |
+          set -euo pipefail
+          TAG="${GITHUB_REF_NAME:-}"
+          VERSION="${{ steps.meta.outputs.version }}"
+          EXPECTED_TAG="v${VERSION#v}"
+          ACTUAL_TAG="v${TAG#v}"
+
+          if [ -z "$TAG" ]; then
+            echo "::error::Missing tag from github.ref_name"
+            exit 1
+          fi
+
+          if [ -z "$VERSION" ]; then
+            echo "::error::pluginVersion is empty or missing in gradle.properties"
+            exit 1
+          fi
+
+          if [ "$ACTUAL_TAG" != "$EXPECTED_TAG" ]; then
+            echo "::error::Tag '$TAG' does not match pluginVersion '$VERSION'. Expected tag: '$EXPECTED_TAG'."
+            exit 1
+          fi
+
+          echo "Tag/version check passed: $ACTUAL_TAG"
+
+      # ── 7. GitHub Release ─────────────────────────────────────────────────
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
@@ -87,7 +117,7 @@ jobs:
           generate_release_notes: true
           fail_on_unmatched_files: true
 
-      # ── 7. (Optional) Sign plugin ─────────────────────────────────────────
+      # ── 8. (Optional) Sign plugin ─────────────────────────────────────────
       - name: Sign plugin
         run: gradle signPlugin
         env:
@@ -95,7 +125,7 @@ jobs:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           PRIVATE_KEY_PASSWORD: ${{ secrets.PRIVATE_KEY_PASSWORD }}
 
-      # ── 8. (Optional) Publish to JetBrains Marketplace ────────────────────
+      # ── 9. (Optional) Publish to JetBrains Marketplace ────────────────────
       - name: Publish plugin to Marketplace
         run: gradle publishPlugin
         env:

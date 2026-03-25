@@ -11,7 +11,6 @@
 
 # Gradle local caches
 .gradle/
-.gradle/
 
 # Repository secrets
 private.pem
