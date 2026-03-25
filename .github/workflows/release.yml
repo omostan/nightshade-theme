@@ -25,7 +25,7 @@ name: Release
 on:
   push:
     tags:
-      - 'v*'
+      - 'v1.0.1'
 
 # Allow the job to create a GitHub Release and upload assets
 permissions:
