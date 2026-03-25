@@ -1,3 +1,15 @@
-out
+# Build output
+/out/
+/build/
+
+# Compiled artifacts – but NOT the Gradle wrapper JAR (that must be committed)
 *.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE
 .idea/
+
+# Gradle local caches
+.gradle/
+.gradle/
+
