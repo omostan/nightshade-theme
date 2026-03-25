@@ -13,3 +13,7 @@
 .gradle/
 .gradle/
 
+# Repository secrets
+private.pem
+certificate.pem
+

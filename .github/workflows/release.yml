@@ -88,22 +88,19 @@ jobs:
           fail_on_unmatched_files: true
 
       # ── 7. (Optional) Sign plugin ─────────────────────────────────────────
-      # Uncomment this step and the publish step below once you have configured
-      # the signing secrets listed at the top of this file.
-      #
-      # - name: Sign plugin
-      #   run: gradle signPlugin
-      #   env:
-      #     CERTIFICATE_CHAIN: ${{ secrets.CERTIFICATE_CHAIN }}
-      #     PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-      #     PRIVATE_KEY_PASSWORD: ${{ secrets.PRIVATE_KEY_PASSWORD }}
+      - name: Sign plugin
+        run: gradle signPlugin
+        env:
+          CERTIFICATE_CHAIN: ${{ secrets.CERTIFICATE_CHAIN }}
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          PRIVATE_KEY_PASSWORD: ${{ secrets.PRIVATE_KEY_PASSWORD }}
 
       # ── 8. (Optional) Publish to JetBrains Marketplace ────────────────────
-      # - name: Publish plugin to Marketplace
-      #   run: gradle publishPlugin
-      #   env:
-      #     PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
-      #     CERTIFICATE_CHAIN: ${{ secrets.CERTIFICATE_CHAIN }}
-      #     PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-      #     PRIVATE_KEY_PASSWORD: ${{ secrets.PRIVATE_KEY_PASSWORD }}
+      - name: Publish plugin to Marketplace
+        run: gradle publishPlugin
+        env:
+          PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+          CERTIFICATE_CHAIN: ${{ secrets.CERTIFICATE_CHAIN }}
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          PRIVATE_KEY_PASSWORD: ${{ secrets.PRIVATE_KEY_PASSWORD }}
 
