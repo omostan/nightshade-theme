@@ -232,6 +232,19 @@ Use exit codes in automated pipelines:
   ./pre-release.sh
   ```
 
+### Expected `./gradlew runIde` warnings
+
+When launching the sandbox IDE with `./gradlew runIde`, the following warnings can appear even when the run is healthy:
+
+- `Archived non-system classes are disabled because the java.system.class.loader property is specified`
+  - Expected for IntelliJ Platform runs that use `com.intellij.util.lang.PathClassLoader`
+  - This is a JVM/Class Data Sharing optimization warning, not a plugin failure
+- `Bundled shared index is not found at: ...\jdk-shared-indexes`
+  - Usually means the downloaded IDE distribution does not include a bundled JDK shared index cache at that path
+  - This may affect startup or indexing performance, but it does not block theme/plugin development
+
+Treat both messages as benign unless `runIde` itself exits with an error, the sandbox IDE fails to start, or the warning text changes in a way that points to a real missing dependency or corrupted IDE download.
+
 ## Related Files
 
 - **Build script**: `build.gradle.kts`
@@ -244,7 +257,7 @@ Use exit codes in automated pipelines:
 
 - Run **validation only** (no build): `bash release-check.sh`
 - Run **build only** (no validation): `./gradlew buildPlugin`
-- Run **IDE** (no build): `./gradlew runIde`
+- Run **IDE** (no build): `./gradlew runIde` or use the shared IntelliJ run configuration `Run IDE (Gradle runIde)`
 
 ## Questions?
 

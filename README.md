@@ -50,6 +50,16 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 Contributions are welcome! If you'd like to suggest improvements or report issues, please open an issue or submit a pull request on [GitHub](https://github.com/omostan/nightshade-theme).
 
+### Local development
+
+For local plugin development, use the shared [`Run IDE (Gradle runIde)` configuration](.run/Run%20IDE%20%28Gradle%20runIde%29.run.xml), or run:
+
+```bash
+./gradlew runIde
+```
+
+Avoid creating or using DevKit `Plugin` run configurations.
+
 ### For Maintainers & Release
 
 - **Pre-Release Build & Validation**: See [Pre-Release Guide](docs/maintainers/PRE_RELEASE_GUIDE.md) for automated build/release checks
