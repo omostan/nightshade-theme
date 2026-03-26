@@ -50,7 +50,10 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 Contributions are welcome! If you'd like to suggest improvements or report issues, please open an issue or submit a pull request on [GitHub](https://github.com/omostan/nightshade-theme).
 
-For release maintenance, see [Signing and Publishing Guide](docs/maintainers/SIGNING_AND_PUBLISHING.md).
+### For Maintainers & Release
+
+- **Pre-Release Build & Validation**: See [Pre-Release Guide](docs/maintainers/PRE_RELEASE_GUIDE.md) for automated build/release checks
+- **Signing & Publishing**: See [Signing and Publishing Guide](docs/maintainers/SIGNING_AND_PUBLISHING.md)
 
 ## Author
 

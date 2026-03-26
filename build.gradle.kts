@@ -1,17 +1,23 @@
+import org.gradle.api.plugins.ExtensionAware
+import org.gradle.kotlin.dsl.withGroovyBuilder
+
 plugins {
-    id("org.jetbrains.intellij") version "1.17.4"
+    id("org.jetbrains.intellij.platform") version "2.13.1"
 }
 group = providers.gradleProperty("pluginGroup").get()
 version = providers.gradleProperty("pluginVersion").get()
 repositories {
     mavenCentral()
+    (this as ExtensionAware).extensions.getByName("intellijPlatform").withGroovyBuilder {
+        "defaultRepositories"()
+    }
 }
-intellij {
-    version.set(providers.gradleProperty("platformVersion").get())
-    type.set(providers.gradleProperty("platformType").get())
-    // Theme-only plugin: skip sources and since/until-build patching
-    downloadSources.set(false)
-    updateSinceUntilBuild.set(false)
+dependencies {
+    (this as ExtensionAware).extensions.getByName("intellijPlatform").withGroovyBuilder {
+        "create"(providers.gradleProperty("platformType").get(), providers.gradleProperty("platformVersion").get())
+        // Theme-only plugin: skip downloading sources
+        "bundledPlugins"("com.intellij.platform.images")
+    }
 }
 // Point the resources source set at the project's top-level resources/ folder
 // so Gradle packages it exactly the same way IntelliJ IDEA's artifact builder does.
@@ -28,14 +34,16 @@ tasks {
     compileTestJava { enabled = false }
     // Building searchable options requires the IDE to run — unnecessary for a theme
     buildSearchableOptions { enabled = false }
-    // Plugin signing — credentials supplied via environment variables / GitHub Secrets
-    signPlugin {
-        certificateChain.set(providers.environmentVariable("CERTIFICATE_CHAIN"))
-        privateKey.set(providers.environmentVariable("PRIVATE_KEY"))
-        password.set(providers.environmentVariable("PRIVATE_KEY_PASSWORD"))
+}
+// Plugin signing — credentials supplied via environment variables / GitHub Secrets
+extensions.getByName("intellijPlatform").withGroovyBuilder {
+    "signing" {
+        setProperty("certificateChain", providers.environmentVariable("CERTIFICATE_CHAIN"))
+        setProperty("privateKey", providers.environmentVariable("PRIVATE_KEY"))
+        setProperty("password", providers.environmentVariable("PRIVATE_KEY_PASSWORD"))
     }
     // JetBrains Marketplace publishing — token supplied via environment variable / GitHub Secret
-    publishPlugin {
-        token.set(providers.environmentVariable("PUBLISH_TOKEN"))
+    "publishing" {
+        setProperty("token", providers.environmentVariable("PUBLISH_TOKEN"))
     }
 }

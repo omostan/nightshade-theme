@@ -11,8 +11,10 @@
 
 # Gradle local caches
 .gradle/
+.intellijPlatform/
 
 # Repository secrets
 private.pem
 certificate.pem
 
+# Helper scripts are committed; generated logs stay ignored under /build/

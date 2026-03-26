@@ -1,2 +1,8 @@
-rootProject.name = "nightshade"
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
 
+rootProject.name = "nightshade"
