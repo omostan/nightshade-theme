@@ -19,6 +19,15 @@ dependencies {
         "bundledPlugins"("com.intellij.platform.images")
     }
 }
+// Declare Java 21 (LTS) as the project's Java toolchain.
+// This aligns the local build with CI (actions/setup-java java-version: '21')
+// and Qodana (projectJDK: "21") configurations.
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
 // Point the resources source set at the project's top-level resources/ folder
 // so Gradle packages it exactly the same way IntelliJ IDEA's artifact builder does.
 sourceSets {
