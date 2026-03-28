@@ -1,0 +1,142 @@
+2026-03-28T14:01:51.511Z [INFO] ----------------------invoke report_event----------------------
+2026-03-28T14:01:51.511Z [INFO] [Tool.invoke]({name: report_event, input: {
+  "projectPath": "/Users/stan/app-dev/JetBrains/Plugins/Themes",
+  "event": "precheckCompleted",
+  "status": "succeeded",
+  "phase": "precheck"
+}}).
+2026-03-28T14:01:51.511Z [INFO] [Tool.invoke] do invoke.
+2026-03-28T14:01:51.513Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'precheckCompleted' reported!\nSession ID: 20260328140151,\nSession Dir: /Users/stan/app-dev/JetBrains/Plugins/Themes/.github/java-upgrade/20260328140151"
+}}).
+2026-03-28T14:01:51.514Z [INFO] ----------------------invoked report_event----------------------
+2026-03-28T14:04:22.773Z [INFO] ----------------------invoke report_event----------------------
+2026-03-28T14:04:22.774Z [INFO] [Tool.invoke]({name: report_event, input: {
+  "sessionId": "20260328140151",
+  "projectPath": "/Users/stan/app-dev/JetBrains/Plugins/Themes",
+  "event": "planInitialized",
+  "status": "succeeded",
+  "phase": "plan"
+}}).
+2026-03-28T14:04:22.774Z [INFO] [Tool.invoke] do invoke.
+2026-03-28T14:04:22.774Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'planInitialized' reported!\nSession ID: 20260328140151,\nSession Dir: /Users/stan/app-dev/JetBrains/Plugins/Themes/.github/java-upgrade/20260328140151"
+}}).
+2026-03-28T14:04:22.774Z [INFO] ----------------------invoked report_event----------------------
+2026-03-28T14:05:25.308Z [INFO] ----------------------invoke report_event----------------------
+2026-03-28T14:05:25.308Z [INFO] [Tool.invoke]({name: report_event, input: {
+  "sessionId": "20260328140151",
+  "projectPath": "/Users/stan/app-dev/JetBrains/Plugins/Themes",
+  "event": "environmentAnalyzed",
+  "status": "succeeded",
+  "phase": "plan"
+}}).
+2026-03-28T14:05:25.308Z [INFO] [Tool.invoke] do invoke.
+2026-03-28T14:05:25.309Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'environmentAnalyzed' reported!\nSession ID: 20260328140151,\nSession Dir: /Users/stan/app-dev/JetBrains/Plugins/Themes/.github/java-upgrade/20260328140151"
+}}).
+2026-03-28T14:05:25.310Z [INFO] ----------------------invoked report_event----------------------
+2026-03-28T14:05:53.060Z [INFO] ----------------------invoke report_event----------------------
+2026-03-28T14:05:53.060Z [INFO] [Tool.invoke]({name: report_event, input: {
+  "sessionId": "20260328140151",
+  "projectPath": "/Users/stan/app-dev/JetBrains/Plugins/Themes",
+  "event": "dependenciesAnalyzed",
+  "status": "succeeded",
+  "phase": "plan"
+}}).
+2026-03-28T14:05:53.061Z [INFO] [Tool.invoke] do invoke.
+2026-03-28T14:05:53.061Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'dependenciesAnalyzed' reported!\nSession ID: 20260328140151,\nSession Dir: /Users/stan/app-dev/JetBrains/Plugins/Themes/.github/java-upgrade/20260328140151"
+}}).
+2026-03-28T14:05:53.061Z [INFO] ----------------------invoked report_event----------------------
+2026-03-28T14:06:00.835Z [INFO] ----------------------invoke report_event----------------------
+2026-03-28T14:06:00.836Z [INFO] [Tool.invoke]({name: report_event, input: {
+  "sessionId": "20260328140151",
+  "projectPath": "/Users/stan/app-dev/JetBrains/Plugins/Themes",
+  "event": "upgradePathDesigned",
+  "status": "succeeded",
+  "phase": "plan"
+}}).
+2026-03-28T14:06:00.836Z [INFO] [Tool.invoke] do invoke.
+2026-03-28T14:06:00.836Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'upgradePathDesigned' reported!\nSession ID: 20260328140151,\nSession Dir: /Users/stan/app-dev/JetBrains/Plugins/Themes/.github/java-upgrade/20260328140151"
+}}).
+2026-03-28T14:06:00.836Z [INFO] ----------------------invoked report_event----------------------
+2026-03-28T14:06:06.992Z [INFO] ----------------------invoke report_event----------------------
+2026-03-28T14:06:06.992Z [INFO] [Tool.invoke]({name: report_event, input: {
+  "sessionId": "20260328140151",
+  "projectPath": "/Users/stan/app-dev/JetBrains/Plugins/Themes",
+  "event": "planReviewed",
+  "status": "succeeded",
+  "phase": "plan"
+}}).
+2026-03-28T14:06:06.993Z [INFO] [Tool.invoke] do invoke.
+2026-03-28T14:06:06.993Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'planReviewed' reported!\nSession ID: 20260328140151,\nSession Dir: /Users/stan/app-dev/JetBrains/Plugins/Themes/.github/java-upgrade/20260328140151"
+}}).
+2026-03-28T14:06:06.993Z [INFO] ----------------------invoked report_event----------------------
+2026-03-28T14:06:15.711Z [INFO] ----------------------invoke confirm_upgrade_plan----------------------
+2026-03-28T14:06:15.711Z [INFO] [Tool.invoke]({name: confirm_upgrade_plan, input: {
+  "sessionId": "20260328140151"
+}}).
+2026-03-28T14:06:15.711Z [INFO] [Tool.invoke] do invoke.
+2026-03-28T14:06:15.712Z [INFO] Upgrade plan confirmed successfully.
+2026-03-28T14:06:15.712Z [INFO] [Tool.invoke]({result: {
+  "message": "Generated plan is reviewed and confirmed by the user! the upgrade process will start now and be tracked in markdown file: /Users/stan/app-dev/JetBrains/Plugins/Themes/.github/java-upgrade/20260328140151/progress.md."
+}}).
+2026-03-28T14:06:15.712Z [INFO] ----------------------invoked confirm_upgrade_plan----------------------
+2026-03-28T14:06:21.790Z [INFO] ----------------------invoke report_event----------------------
+2026-03-28T14:06:21.790Z [INFO] [Tool.invoke]({name: report_event, input: {
+  "sessionId": "20260328140151",
+  "projectPath": "/Users/stan/app-dev/JetBrains/Plugins/Themes",
+  "event": "planConfirmed",
+  "status": "succeeded",
+  "phase": "plan"
+}}).
+2026-03-28T14:06:21.790Z [INFO] [Tool.invoke] do invoke.
+2026-03-28T14:06:21.791Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'planConfirmed' reported!\nSession ID: 20260328140151,\nSession Dir: /Users/stan/app-dev/JetBrains/Plugins/Themes/.github/java-upgrade/20260328140151"
+}}).
+2026-03-28T14:06:21.791Z [INFO] ----------------------invoked report_event----------------------
+2026-03-28T14:07:33.623Z [INFO] ----------------------invoke report_event----------------------
+2026-03-28T14:07:33.623Z [INFO] [Tool.invoke]({name: report_event, input: {
+  "sessionId": "20260328140151",
+  "projectPath": "/Users/stan/app-dev/JetBrains/Plugins/Themes",
+  "event": "planExecutionStarted",
+  "status": "succeeded",
+  "phase": "execute"
+}}).
+2026-03-28T14:07:33.624Z [INFO] [Tool.invoke] do invoke.
+2026-03-28T14:07:33.643Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'planExecutionStarted' reported!\nSession ID: 20260328140151,\nSession Dir: /Users/stan/app-dev/JetBrains/Plugins/Themes/.github/java-upgrade/20260328140151"
+}}).
+2026-03-28T14:07:33.643Z [INFO] ----------------------invoked report_event----------------------
+2026-03-28T14:07:42.700Z [INFO] ----------------------invoke install_jdk----------------------
+2026-03-28T14:07:42.701Z [INFO] [Tool.invoke]({name: install_jdk, input: {
+  "sessionId": "20260328140151",
+  "version": "21"
+}}).
+2026-03-28T14:07:42.701Z [INFO] [Tool.invoke] do invoke.
+2026-03-28T14:07:53.659Z [INFO] [Tool.invoke]({result: {
+  "result": {
+    "name": "java",
+    "path": "/Users/stan/.jdk/jdk-21.0.8/jdk-21.0.8+9/Contents/Home/bin",
+    "version": "21.0.8"
+  },
+  "message": "JDK 21 is installed at /Users/stan/.jdk/jdk-21.0.8/jdk-21.0.8+9/Contents/Home/bin",
+  "telemetry": {
+    "tool": "JDK",
+    "version": "21"
+  }
+}}).
+2026-03-28T14:07:53.659Z [INFO] ----------------------invoked install_jdk----------------------
+2026-03-28T14:08:00.194Z [INFO] ----------------------invoke list_jdks----------------------
+2026-03-28T14:08:00.194Z [INFO] [Tool.invoke]({name: list_jdks, input: {
+  "sessionId": "20260328140151",
+  "version": "21"
+}}).
+2026-03-28T14:08:00.194Z [INFO] [Tool.invoke] do invoke.
+2026-03-28T14:08:00.217Z [INFO] [Tool.invoke]({result: {
+  "message": "We found following jdks in your system:\n\n1. Java 21.0.8\n   📁 Path: /Users/stan/.jdk/jdk-21.0.8/jdk-21.0.8+9/Contents/Home/bin\n   🏷️ Source: install\n\nTotal: 1 JDK installation(s) found"
+}}).
+2026-03-28T14:08:00.217Z [INFO] ----------------------invoked list_jdks----------------------
