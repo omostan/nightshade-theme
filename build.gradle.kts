@@ -41,8 +41,12 @@ tasks {
     // No Java sources to compile
     compileJava { enabled = false }
     compileTestJava { enabled = false }
-    // Building searchable options requires the IDE to run — unnecessary for a theme
+    // Building searchable options requires the IDE to run — unnecessary for a theme.
+    // prepareJarSearchableOptions is also disabled to prevent Gradle 9's strict
+    // @InputDirectory validation failure on clean builds (it expects buildSearchableOptions'
+    // output directory which never exists when the upstream task is disabled).
     buildSearchableOptions { enabled = false }
+    named("prepareJarSearchableOptions") { enabled = false }
 }
 // Plugin signing — credentials supplied via environment variables / GitHub Secrets
 extensions.getByName("intellijPlatform").withGroovyBuilder {

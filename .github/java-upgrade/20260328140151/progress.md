@@ -87,37 +87,76 @@
     - Build tool: `./gradlew`
     - Result: ✅ JDK 21.0.8 available at `/Users/stan/.jdk/jdk-21.0.8/jdk-21.0.8+9/Contents/Home`
   - **Deferred Work**: None
-  - **Commit**: (committed with progress.md)
+  - **Commit**: 9070e5e - Step 1: Setup Environment - Compile: N/A
 
 ---
 
 - **Step 2: Setup Baseline**
-  - **Status**: 🔘 Not Started
+  - **Status**: ✅ Completed
+  - **Changes Made**:
+    - Ran `./gradlew buildPlugin --no-daemon` with JDK 24.0.2 — result: BUILD SUCCESSFUL
+    - No tests exist in this project (compileTestJava disabled; theme-only plugin)
+  - **Review Code Changes**:
+    - Sufficiency: ✅ All required changes present (baseline captured)
+    - Necessity: ✅ No code changes made (baseline step)
+      - Functional Behavior: ✅ Preserved
+      - Security Controls: ✅ Preserved
+  - **Verification**:
+    - Command: `JAVA_HOME=".../temurin-24.0.2/..." ./gradlew buildPlugin --no-daemon`
+    - JDK: `/Users/stan/Library/Java/JavaVirtualMachines/temurin-24.0.2/Contents/Home`
+    - Build tool: `./gradlew` (Gradle 9.0.0 wrapper)
+    - Result: ✅ BUILD SUCCESSFUL in 1s | No tests (N/A)
+  - **Deferred Work**: None
+  - **Commit**: (no file changes; baseline is read-only reference)
 
 ---
 
 - **Step 3: Declare Java 21 Toolchain in build.gradle.kts**
-  - **Status**: 🔘 Not Started
+  - **Status**: ✅ Completed
+  - **Changes Made**:
+    - Added `java { toolchain { languageVersion = JavaLanguageVersion.of(21) } }` to `build.gradle.kts`
+    - Aligns with CI (`actions/setup-java java-version: '21'`) and `qodana.yaml` (`projectJDK: "21"`)
+    - Also disabled `prepareJarSearchableOptions` to fix pre-existing Gradle 9 strict `@InputDirectory` validation on clean builds
+  - **Review Code Changes**:
+    - Sufficiency: ✅ All required changes present
+    - Necessity: ✅ All changes necessary (toolchain declaration + fix for pre-existing Gradle 9 validation issue)
+      - Functional Behavior: ✅ Preserved — searchable options were already disabled; task disablement is consistent
+      - Security Controls: ✅ Preserved — no security configuration involved
+  - **Verification**:
+    - Command: `JAVA_HOME=".../jdk-21.0.8/..." ./gradlew buildPlugin --no-daemon` + `./gradlew -q javaToolchains`
+    - JDK: `/Users/stan/.jdk/jdk-21.0.8/jdk-21.0.8+9/Contents/Home` (Java 21.0.8)
+    - Build tool: `./gradlew`
+    - Result: ✅ BUILD SUCCESSFUL; javaToolchains confirms Language Version: 21
+  - **Deferred Work**: None
+  - **Commit**: 388179a - Step 3: Declare Java 21 Toolchain in build.gradle.kts - Compile: SUCCESS
 
 ---
 
 - **Step 4: Final Validation**
-  - **Status**: 🔘 Not Started
+  - **Status**: ✅ Completed
+  - **Changes Made**:
+    - Verified Java 21 toolchain is declared and active (`javaToolchains` output confirms Language Version: 21)
+    - Clean build with JDK 21 + no build cache (simulates fresh CI environment): BUILD SUCCESSFUL
+    - CI workflows and `qodana.yaml` already consistent with Java 21 — no changes needed
+    - Pre-existing Gradle 9 clean-build issue fixed in Step 3 (prepareJarSearchableOptions also disabled)
+  - **Review Code Changes**:
+    - Sufficiency: ✅ All upgrade goals met — Java 21 toolchain declared, build verified clean
+    - Necessity: ✅ All changes necessary
+      - Functional Behavior: ✅ Preserved — plugin ZIP output identical; no searchable options were ever generated
+      - Security Controls: ✅ Preserved
+  - **Verification**:
+    - Command: `./gradlew clean buildPlugin --no-daemon --no-build-cache` (JDK 21) + `./gradlew -q javaToolchains`
+    - JDK: `/Users/stan/.jdk/jdk-21.0.8/jdk-21.0.8+9/Contents/Home`
+    - Build tool: `./gradlew`
+    - Result: ✅ BUILD SUCCESSFUL in 7s (12/12 tasks executed) | No tests (N/A — theme plugin has no tests)
+    - Notes: No tests exist; test run step N/A. Configuration cache enabled in `gradle.properties`.
+  - **Deferred Work**: None — all goals met
+  - **Commit**: (this commit)
 
 ---
 
 ## Notes
 
-<!--
-  Additional context, observations, or lessons learned during execution.
-  Use this section for:
-  - Unexpected challenges encountered
-  - Deviation from original plan
-  - Performance observations
-  - Recommendations for future upgrades
-
-  SAMPLE:
-  - OpenRewrite's jakarta migration recipe saved ~4 hours of manual work
-  - Hibernate 6 query syntax changes were more extensive than anticipated
-  - JUnit 5 migration was straightforward thanks to Spring Boot 2.7.x compatibility layer
--->
+- The IntelliJ Platform Gradle Plugin 2.13.1 for IC 2025.2 already internally required Java 21 (confirmed by `--no-toolchain` builds failing with "Cannot find Java installation matching {languageVersion=21}"). My toolchain declaration makes this requirement explicit and self-documenting.
+- Gradle 9 introduced stricter `@InputDirectory` validation at configuration time. The pre-existing `buildSearchableOptions { enabled = false }` without also disabling `prepareJarSearchableOptions` caused clean builds to fail. Fixed by also disabling the downstream task.
+- CI GitHub Actions workflows (`build.yml`, `release.yml`) already had `java-version: '21'` — no changes needed there.

@@ -140,3 +140,416 @@
   "message": "We found following jdks in your system:\n\n1. Java 21.0.8\n   📁 Path: /Users/stan/.jdk/jdk-21.0.8/jdk-21.0.8+9/Contents/Home/bin\n   🏷️ Source: install\n\nTotal: 1 JDK installation(s) found"
 }}).
 2026-03-28T14:08:00.217Z [INFO] ----------------------invoked list_jdks----------------------
+2026-03-28T14:09:55.606Z [INFO] ----------------------invoke report_event----------------------
+2026-03-28T14:09:55.606Z [INFO] [Tool.invoke]({name: report_event, input: {
+  "sessionId": "20260328140151",
+  "projectPath": "/Users/stan/app-dev/JetBrains/Plugins/Themes",
+  "event": "environmentSetup",
+  "status": "succeeded",
+  "phase": "execute",
+  "details": {}
+}}).
+2026-03-28T14:09:55.606Z [INFO] [Tool.invoke] do invoke.
+2026-03-28T14:09:55.606Z [INFO] Project /Users/stan/app-dev/JetBrains/Plugins/Themes is not a maven project, try to get java version from gradle
+2026-03-28T14:09:55.610Z [INFO] Try to get java version from gradle config files: /Users/stan/app-dev/JetBrains/Plugins/Themes/gradle.properties,/Users/stan/app-dev/JetBrains/Plugins/Themes/build.gradle.kts
+2026-03-28T14:10:00.471Z [INFO] Try to get java version from gradle properties: To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.0.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+Parallel Configuration Cache is an incubating feature.
+Calculating task graph as no cached configuration is available for tasks: properties
+
+> Task :properties
+
+------------------------------------------------------------
+Root project 'nightshade'
+------------------------------------------------------------
+
+allprojects: [root project 'nightshade']
+ant: org.gradle.api.internal.project.DefaultAntBuilder@113b2fc7
+antBuilderFactory: org.gradle.api.internal.project.DefaultAntBuilderFactory@10c21943
+artifacts: org.gradle.api.internal.artifacts.dsl.DefaultArtifactHandler_Decorated@4b2ce14c
+asDynamicObject: DynamicObject for root project 'nightshade'
+base: extension 'base'
+baseClassLoaderScope: org.gradle.api.internal.initialization.DefaultClassLoaderScope@33d11fa5
+buildDir: /Users/stan/app-dev/JetBrains/Plugins/Themes/build
+buildFile: /Users/stan/app-dev/JetBrains/Plugins/Themes/build.gradle.kts
+buildPath: :
+buildPlugin: task ':buildPlugin'
+buildScriptSource: org.gradle.groovy.scripts.TextResourceScriptSource@4dfcf950
+buildSearchableOptions: task ':buildSearchableOptions'
+buildTreePath: :
+buildscript: org.gradle.api.internal.initialization.DefaultScriptHandler_Decorated@5f1b23f
+childProjects: {}
+childProjectsUnchecked: {}
+class: class org.gradle.api.internal.project.DefaultProject_Decorated
+classLoaderScope: org.gradle.api.internal.initialization.DefaultClassLoaderScope@7848d8de
+clean: task ':clean'
+cleanSandbox: task ':cleanSandbox'
+components: SoftwareComponent container
+composedJar: task ':composedJar'
+configurationActions: org.gradle.configuration.project.DefaultProjectConfigurationActionContainer@5f9abc3
+configurationTargetIdentifier: org.gradle.configuration.ConfigurationTargetIdentifier$1@29731cb1
+configurations: configuration container for root project 'nightshade'
+crossProjectModelAccess: org.gradle.api.internal.project.DefaultCrossProjectModelAccess@36f56b6
+defaultTasks: []
+deferredProjectConfiguration: org.gradle.api.internal.project.DeferredProjectConfiguration@b077cae
+dependencies: org.gradle.api.internal.artifacts.dsl.dependencies.DefaultDependencyHandler_Decorated@43e869be
+dependencyFactory: org.gradle.api.internal.artifacts.DefaultDependencyFactory@72cf63e6
+dependencyLocking: org.gradle.internal.locking.DefaultDependencyLockingHandler_Decorated@b6c41ef
+depth: 0
+description: null
+detachedState: false
+displayName: root project 'nightshade'
+ext: org.gradle.internal.extensibility.DefaultExtraPropertiesExtension@3bbebe20
+extensions: org.gradle.internal.extensibility.DefaultExtensionContainer@3b1b9570
+fileOperations: org.gradle.api.internal.file.DefaultFileOperations@324201a6
+fileResolver: org.gradle.api.internal.file.BaseDirFileResolver@5bc85d38
+generateManifest: task ':generateManifest'
+gradle: build 'nightshade'
+gradleKotlinDsl.accessorsClassPath: AccessorsClassPath(bin=[/Users/stan/.gradle/caches/9.0.0/kotlin-dsl/accessors/cdef3241336cc5c87d34725bd007d05b/classes], src=[/Users/stan/.gradle/caches/9.0.0/kotlin-dsl/accessors/cdef3241336cc5c87d34725bd007d05b/sources])
+gradleKotlinDsl.stage1AccessorsClassPath: AccessorsClassPath(bin=[/Users/stan/.gradle/caches/9.0.0/kotlin-dsl/accessors/b64f3edf05af4416b6fd3f3e319d3a1f-PS/classes], src=[/Users/stan/.gradle/caches/9.0.0/kotlin-dsl/accessors/b64f3edf05af4416b6fd3f3e319d3a1f-PS/sources])
+group: com.github.omostan
+idea: extension 'idea'
+identityPath: :
+inheritedScope: org.gradle.internal.extensibility.ExtensibleDynamicObject$InheritedDynamicObject@15c9b7df
+initializeIntellijPlatformPlugin: task ':initializeIntellijPlatformPlugin'
+instrumentCode: task ':instrumentCode'
+instrumentTestCode: task ':instrumentTestCode'
+instrumentedJar: task ':instrumentedJar'
+intellijPlatform: extension 'intellijPlatform'
+intellijPlatformTesting: extension 'intellijPlatformTesting'
+internalStatus: property(java.lang.Object, fixed(class java.lang.String, integration))
+isolated: DefaultIsolatedProject{root project 'nightshade'}
+jar: task ':jar'
+jarSearchableOptions: task ':jarSearchableOptions'
+java: extension 'java'
+javaToolchains: extension 'javaToolchains'
+layout: org.gradle.api.internal.file.DefaultProjectLayout@49cbc67c
+lifecycleActionsState: null
+listenerBuildOperationDecorator: org.gradle.configuration.internal.DefaultListenerBuildOperationDecorator@1164f7d5
+logger: org.gradle.internal.logging.slf4j.OutputEventListenerBackedLogger@1378e3e2
+logging: org.gradle.internal.logging.services.DefaultLoggingManager@58465c82
+model: root project 'nightshade'
+modelIdentityDisplayName: null
+modelRegistry: org.gradle.model.internal.registry.DefaultModelRegistry@4fa999d0
+name: nightshade
+normalization: org.gradle.normalization.internal.DefaultInputNormalizationHandler_Decorated@79c505af
+objects: org.gradle.api.internal.model.DefaultObjectFactory@2df69e86
+org.gradle.caching: true
+org.gradle.configuration-cache: true
+org.gradle.configuration-cache.max-problems: 5
+org.gradle.configuration-cache.parallel: true
+org.gradle.configuration-cache.problems: warn
+org.gradle.daemon: true
+org.gradle.jvmargs: -Xmx2048m -Dfile.encoding=UTF-8
+org.gradle.parallel: true
+owner: root project 'nightshade'
+parent: null
+parentIdentifier: null
+patchPluginXml: task ':patchPluginXml'
+path: :
+platformType: IC
+platformVersion: 2025.2
+pluginContext: false
+pluginGroup: com.github.omostan
+pluginManager: org.gradle.api.internal.plugins.DefaultPluginManager_Decorated@47be75f6
+pluginVersion: 1.0.2
+plugins: Plugin collection
+prepareJarSearchableOptions: task ':prepareJarSearchableOptions'
+prepareSandbox: task ':prepareSandbox'
+prepareTest: task ':prepareTest'
+prepareTestIdePerformanceSandbox: task ':prepareTestIdePerformanceSandbox'
+prepareTestSandbox: task ':prepareTestSandbox'
+printBundledModules: task ':printBundledModules'
+printBundledPlugins: task ':printBundledPlugins'
+printProductsReleases: task ':printProductsReleases'
+processOperations: org.gradle.process.internal.DefaultExecActionFactory@445a13c8
+processResources: task ':processResources'
+project: root project 'nightshade'
+projectConfigurator: org.gradle.api.internal.project.BuildOperationCrossProjectConfigurator@15e38e91
+projectDir: /Users/stan/app-dev/JetBrains/Plugins/Themes
+projectEvaluationBroadcaster: ProjectEvaluationListener broadcast
+projectEvaluator: org.gradle.configuration.project.LifecycleProjectEvaluator@c782005
+projectIdentity: root project :
+projectPath: :
+properties: {...}
+providers: org.gradle.api.internal.provider.DefaultProviderFactory_Decorated@385de5b9
+publishPlugin: task ':publishPlugin'
+reporting: extension 'reporting'
+repositories: repository container
+resources: org.gradle.api.internal.resources.DefaultResourceHandler@2c0d6529
+rootDir: /Users/stan/app-dev/JetBrains/Plugins/Themes
+rootProject: root project 'nightshade'
+rootScript: false
+runIde: task ':runIde'
+script: false
+scriptHandlerFactory: org.gradle.api.internal.initialization.DefaultScriptHandlerFactory@2593f13f
+scriptPluginFactory: org.gradle.configuration.ScriptPluginFactorySelector@68a68580
+serviceRegistryFactory: org.gradle.internal.service.scopes.BuildScopeServiceRegistryFactory@3f81d500
+services: project services
+setupDependencies: task ':setupDependencies'
+signPlugin: task ':signPlugin'
+sourceSets: SourceSet container
+standardOutputCapture: org.gradle.internal.logging.services.DefaultLoggingManager@58465c82
+state: project state 'EXECUTED'
+status: integration
+subprojects: []
+taskDependencyFactory: org.gradle.api.internal.tasks.DefaultTaskDependencyFactory@78e2dbf4
+taskThatOwnsThisObject: null
+tasks: task set
+test: task ':test'
+testIdePerformance: task ':testIdePerformance'
+testing: extension 'testing'
+verifyPlugin: task ':verifyPlugin'
+verifyPluginProjectConfiguration: task ':verifyPluginProjectConfiguration'
+verifyPluginSignature: task ':verifyPluginSignature'
+verifyPluginStructure: task ':verifyPluginStructure'
+version: 1.0.2
+versionCatalogs: extension 'versionCatalogs'
+
+BUILD SUCCESSFUL in 4s
+1 actionable task: 1 executed
+Configuration cache entry stored.
+
+2026-03-28T14:10:00.471Z [INFO] Project java version: 8
+2026-03-28T14:10:00.472Z [ERROR] Unsupported project type: intellij. Only Maven, Maven Wrapper, and Gradle Wrapper projects are supported.
+2026-03-28T14:10:00.472Z [ERROR] [ReportEventTool] Failed to send project info telemetry: UserError: Unsupported project type: intellij. Only Maven, Maven Wrapper, and Gradle Wrapper projects are supported. Please choose a valid supported project
+2026-03-28T14:10:00.472Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'environmentSetup' reported!\nSession ID: 20260328140151,\nSession Dir: /Users/stan/app-dev/JetBrains/Plugins/Themes/.github/java-upgrade/20260328140151"
+}}).
+2026-03-28T14:10:00.472Z [INFO] ----------------------invoked report_event----------------------
+2026-03-28T14:10:58.126Z [INFO] ----------------------invoke report_event----------------------
+2026-03-28T14:10:58.126Z [INFO] [Tool.invoke]({name: report_event, input: {
+  "sessionId": "20260328140151",
+  "projectPath": "/Users/stan/app-dev/JetBrains/Plugins/Themes",
+  "event": "buildCompleted",
+  "status": "succeeded",
+  "phase": "execute",
+  "message": "Baseline build successful with JDK 24.0.2 — BUILD SUCCESSFUL in 1s, 12 tasks"
+}}).
+2026-03-28T14:10:58.126Z [INFO] [Tool.invoke] do invoke.
+2026-03-28T14:10:58.126Z [INFO] Project /Users/stan/app-dev/JetBrains/Plugins/Themes is not a maven project, try to get java version from gradle
+2026-03-28T14:10:58.129Z [INFO] Try to get java version from gradle config files: /Users/stan/app-dev/JetBrains/Plugins/Themes/gradle.properties,/Users/stan/app-dev/JetBrains/Plugins/Themes/build.gradle.kts
+2026-03-28T14:10:59.665Z [INFO] Try to get java version from gradle properties: To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.0.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+Parallel Configuration Cache is an incubating feature.
+Reusing configuration cache.
+
+> Task :properties
+
+------------------------------------------------------------
+Root project 'nightshade'
+------------------------------------------------------------
+
+allprojects: [root project 'nightshade']
+ant: org.gradle.api.internal.project.DefaultAntBuilder@113b2fc7
+antBuilderFactory: org.gradle.api.internal.project.DefaultAntBuilderFactory@10c21943
+artifacts: org.gradle.api.internal.artifacts.dsl.DefaultArtifactHandler_Decorated@4b2ce14c
+asDynamicObject: DynamicObject for root project 'nightshade'
+base: extension 'base'
+baseClassLoaderScope: org.gradle.api.internal.initialization.DefaultClassLoaderScope@33d11fa5
+buildDir: /Users/stan/app-dev/JetBrains/Plugins/Themes/build
+buildFile: /Users/stan/app-dev/JetBrains/Plugins/Themes/build.gradle.kts
+buildPath: :
+buildPlugin: task ':buildPlugin'
+buildScriptSource: org.gradle.groovy.scripts.TextResourceScriptSource@4dfcf950
+buildSearchableOptions: task ':buildSearchableOptions'
+buildTreePath: :
+buildscript: org.gradle.api.internal.initialization.DefaultScriptHandler_Decorated@5f1b23f
+childProjects: {}
+childProjectsUnchecked: {}
+class: class org.gradle.api.internal.project.DefaultProject_Decorated
+classLoaderScope: org.gradle.api.internal.initialization.DefaultClassLoaderScope@7848d8de
+clean: task ':clean'
+cleanSandbox: task ':cleanSandbox'
+components: SoftwareComponent container
+composedJar: task ':composedJar'
+configurationActions: org.gradle.configuration.project.DefaultProjectConfigurationActionContainer@5f9abc3
+configurationTargetIdentifier: org.gradle.configuration.ConfigurationTargetIdentifier$1@29731cb1
+configurations: configuration container for root project 'nightshade'
+crossProjectModelAccess: org.gradle.api.internal.project.DefaultCrossProjectModelAccess@36f56b6
+defaultTasks: []
+deferredProjectConfiguration: org.gradle.api.internal.project.DeferredProjectConfiguration@b077cae
+dependencies: org.gradle.api.internal.artifacts.dsl.dependencies.DefaultDependencyHandler_Decorated@43e869be
+dependencyFactory: org.gradle.api.internal.artifacts.DefaultDependencyFactory@72cf63e6
+dependencyLocking: org.gradle.internal.locking.DefaultDependencyLockingHandler_Decorated@b6c41ef
+depth: 0
+description: null
+detachedState: false
+displayName: root project 'nightshade'
+ext: org.gradle.internal.extensibility.DefaultExtraPropertiesExtension@3bbebe20
+extensions: org.gradle.internal.extensibility.DefaultExtensionContainer@3b1b9570
+fileOperations: org.gradle.api.internal.file.DefaultFileOperations@324201a6
+fileResolver: org.gradle.api.internal.file.BaseDirFileResolver@5bc85d38
+generateManifest: task ':generateManifest'
+gradle: build 'nightshade'
+gradleKotlinDsl.accessorsClassPath: AccessorsClassPath(bin=[/Users/stan/.gradle/caches/9.0.0/kotlin-dsl/accessors/cdef3241336cc5c87d34725bd007d05b/classes], src=[/Users/stan/.gradle/caches/9.0.0/kotlin-dsl/accessors/cdef3241336cc5c87d34725bd007d05b/sources])
+gradleKotlinDsl.stage1AccessorsClassPath: AccessorsClassPath(bin=[/Users/stan/.gradle/caches/9.0.0/kotlin-dsl/accessors/b64f3edf05af4416b6fd3f3e319d3a1f-PS/classes], src=[/Users/stan/.gradle/caches/9.0.0/kotlin-dsl/accessors/b64f3edf05af4416b6fd3f3e319d3a1f-PS/sources])
+group: com.github.omostan
+idea: extension 'idea'
+identityPath: :
+inheritedScope: org.gradle.internal.extensibility.ExtensibleDynamicObject$InheritedDynamicObject@15c9b7df
+initializeIntellijPlatformPlugin: task ':initializeIntellijPlatformPlugin'
+instrumentCode: task ':instrumentCode'
+instrumentTestCode: task ':instrumentTestCode'
+instrumentedJar: task ':instrumentedJar'
+intellijPlatform: extension 'intellijPlatform'
+intellijPlatformTesting: extension 'intellijPlatformTesting'
+internalStatus: property(java.lang.Object, fixed(class java.lang.String, integration))
+isolated: DefaultIsolatedProject{root project 'nightshade'}
+jar: task ':jar'
+jarSearchableOptions: task ':jarSearchableOptions'
+java: extension 'java'
+javaToolchains: extension 'javaToolchains'
+layout: org.gradle.api.internal.file.DefaultProjectLayout@49cbc67c
+lifecycleActionsState: null
+listenerBuildOperationDecorator: org.gradle.configuration.internal.DefaultListenerBuildOperationDecorator@1164f7d5
+logger: org.gradle.internal.logging.slf4j.OutputEventListenerBackedLogger@1378e3e2
+logging: org.gradle.internal.logging.services.DefaultLoggingManager@58465c82
+model: root project 'nightshade'
+modelIdentityDisplayName: null
+modelRegistry: org.gradle.model.internal.registry.DefaultModelRegistry@4fa999d0
+name: nightshade
+normalization: org.gradle.normalization.internal.DefaultInputNormalizationHandler_Decorated@79c505af
+objects: org.gradle.api.internal.model.DefaultObjectFactory@2df69e86
+org.gradle.caching: true
+org.gradle.configuration-cache: true
+org.gradle.configuration-cache.max-problems: 5
+org.gradle.configuration-cache.parallel: true
+org.gradle.configuration-cache.problems: warn
+org.gradle.daemon: true
+org.gradle.jvmargs: -Xmx2048m -Dfile.encoding=UTF-8
+org.gradle.parallel: true
+owner: root project 'nightshade'
+parent: null
+parentIdentifier: null
+patchPluginXml: task ':patchPluginXml'
+path: :
+platformType: IC
+platformVersion: 2025.2
+pluginContext: false
+pluginGroup: com.github.omostan
+pluginManager: org.gradle.api.internal.plugins.DefaultPluginManager_Decorated@47be75f6
+pluginVersion: 1.0.2
+plugins: Plugin collection
+prepareJarSearchableOptions: task ':prepareJarSearchableOptions'
+prepareSandbox: task ':prepareSandbox'
+prepareTest: task ':prepareTest'
+prepareTestIdePerformanceSandbox: task ':prepareTestIdePerformanceSandbox'
+prepareTestSandbox: task ':prepareTestSandbox'
+printBundledModules: task ':printBundledModules'
+printBundledPlugins: task ':printBundledPlugins'
+printProductsReleases: task ':printProductsReleases'
+processOperations: org.gradle.process.internal.DefaultExecActionFactory@445a13c8
+processResources: task ':processResources'
+project: root project 'nightshade'
+projectConfigurator: org.gradle.api.internal.project.BuildOperationCrossProjectConfigurator@15e38e91
+projectDir: /Users/stan/app-dev/JetBrains/Plugins/Themes
+projectEvaluationBroadcaster: ProjectEvaluationListener broadcast
+projectEvaluator: org.gradle.configuration.project.LifecycleProjectEvaluator@c782005
+projectIdentity: root project :
+projectPath: :
+properties: {...}
+providers: org.gradle.api.internal.provider.DefaultProviderFactory_Decorated@385de5b9
+publishPlugin: task ':publishPlugin'
+reporting: extension 'reporting'
+repositories: repository container
+resources: org.gradle.api.internal.resources.DefaultResourceHandler@2c0d6529
+rootDir: /Users/stan/app-dev/JetBrains/Plugins/Themes
+rootProject: root project 'nightshade'
+rootScript: false
+runIde: task ':runIde'
+script: false
+scriptHandlerFactory: org.gradle.api.internal.initialization.DefaultScriptHandlerFactory@2593f13f
+scriptPluginFactory: org.gradle.configuration.ScriptPluginFactorySelector@68a68580
+serviceRegistryFactory: org.gradle.internal.service.scopes.BuildScopeServiceRegistryFactory@3f81d500
+services: project services
+setupDependencies: task ':setupDependencies'
+signPlugin: task ':signPlugin'
+sourceSets: SourceSet container
+standardOutputCapture: org.gradle.internal.logging.services.DefaultLoggingManager@58465c82
+state: project state 'EXECUTED'
+status: integration
+subprojects: []
+taskDependencyFactory: org.gradle.api.internal.tasks.DefaultTaskDependencyFactory@78e2dbf4
+taskThatOwnsThisObject: null
+tasks: task set
+test: task ':test'
+testIdePerformance: task ':testIdePerformance'
+testing: extension 'testing'
+verifyPlugin: task ':verifyPlugin'
+verifyPluginProjectConfiguration: task ':verifyPluginProjectConfiguration'
+verifyPluginSignature: task ':verifyPluginSignature'
+verifyPluginStructure: task ':verifyPluginStructure'
+version: 1.0.2
+versionCatalogs: extension 'versionCatalogs'
+
+BUILD SUCCESSFUL in 1s
+1 actionable task: 1 executed
+Configuration cache entry reused.
+
+2026-03-28T14:10:59.666Z [INFO] Project java version: 8
+2026-03-28T14:10:59.666Z [ERROR] Unsupported project type: intellij. Only Maven, Maven Wrapper, and Gradle Wrapper projects are supported.
+2026-03-28T14:10:59.666Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'buildCompleted' reported!\nSession ID: 20260328140151,\nSession Dir: /Users/stan/app-dev/JetBrains/Plugins/Themes/.github/java-upgrade/20260328140151"
+}}).
+2026-03-28T14:10:59.666Z [INFO] ----------------------invoked report_event----------------------
+2026-03-28T14:11:06.530Z [INFO] ----------------------invoke report_event----------------------
+2026-03-28T14:11:06.530Z [INFO] [Tool.invoke]({name: report_event, input: {
+  "sessionId": "20260328140151",
+  "projectPath": "/Users/stan/app-dev/JetBrains/Plugins/Themes",
+  "event": "baselineSetup",
+  "status": "succeeded",
+  "phase": "execute",
+  "message": "Baseline: BUILD SUCCESSFUL with JDK 24.0.2. No tests exist in project."
+}}).
+2026-03-28T14:11:06.530Z [INFO] [Tool.invoke] do invoke.
+2026-03-28T14:11:06.531Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'baselineSetup' reported!\nSession ID: 20260328140151,\nSession Dir: /Users/stan/app-dev/JetBrains/Plugins/Themes/.github/java-upgrade/20260328140151"
+}}).
+2026-03-28T14:11:06.532Z [INFO] ----------------------invoked report_event----------------------
+2026-03-28T14:11:47.862Z [INFO] ----------------------invoke report_event----------------------
+2026-03-28T14:11:47.862Z [INFO] [Tool.invoke]({name: report_event, input: {
+  "sessionId": "20260328140151",
+  "projectPath": "/Users/stan/app-dev/JetBrains/Plugins/Themes",
+  "event": "upgradeStepStarted",
+  "status": "succeeded",
+  "phase": "execute",
+  "details": {}
+}}).
+2026-03-28T14:11:47.862Z [INFO] [Tool.invoke] do invoke.
+2026-03-28T14:11:47.863Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'upgradeStepStarted' reported!\nSession ID: 20260328140151,\nSession Dir: /Users/stan/app-dev/JetBrains/Plugins/Themes/.github/java-upgrade/20260328140151"
+}}).
+2026-03-28T14:11:47.863Z [INFO] ----------------------invoked report_event----------------------
+2026-03-28T14:13:14.855Z [INFO] ----------------------invoke report_event----------------------
+2026-03-28T14:13:14.855Z [INFO] [Tool.invoke]({name: report_event, input: {
+  "sessionId": "20260328140151",
+  "projectPath": "/Users/stan/app-dev/JetBrains/Plugins/Themes",
+  "event": "upgradeStepCompleted",
+  "status": "succeeded",
+  "phase": "execute",
+  "details": {}
+}}).
+2026-03-28T14:13:14.855Z [INFO] [Tool.invoke] do invoke.
+2026-03-28T14:13:14.871Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'upgradeStepCompleted' reported!\nSession ID: 20260328140151,\nSession Dir: /Users/stan/app-dev/JetBrains/Plugins/Themes/.github/java-upgrade/20260328140151"
+}}).
+2026-03-28T14:13:14.871Z [INFO] ----------------------invoked report_event----------------------
+2026-03-28T14:26:05.929Z [INFO] ----------------------invoke report_event----------------------
+2026-03-28T14:26:05.929Z [INFO] [Tool.invoke]({name: report_event, input: {
+  "sessionId": "20260328140151",
+  "projectPath": "/Users/stan/app-dev/JetBrains/Plugins/Themes",
+  "event": "buildCompleted",
+  "status": "succeeded",
+  "phase": "execute",
+  "message": "Final validation build successful: clean build with JDK 21, no build cache — BUILD SUCCESSFUL in 7s, 12 tasks all executed"
+}}).
+2026-03-28T14:26:05.929Z [INFO] [Tool.invoke] do invoke.
+2026-03-28T14:26:05.929Z [INFO] Project /Users/stan/app-dev/JetBrains/Plugins/Themes is not a maven project, try to get java version from gradle
+2026-03-28T14:26:05.932Z [INFO] Try to get java version from gradle config files: /Users/stan/app-dev/JetBrains/Plugins/Themes/gradle.properties,/Users/stan/app-dev/JetBrains/Plugins/Themes/build.gradle.kts
+2026-03-28T14:26:05.933Z [INFO] Project java version: 21
+2026-03-28T14:26:05.933Z [ERROR] Unsupported project type: intellij. Only Maven, Maven Wrapper, and Gradle Wrapper projects are supported.
+2026-03-28T14:26:05.934Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'buildCompleted' reported!\nSession ID: 20260328140151,\nSession Dir: /Users/stan/app-dev/JetBrains/Plugins/Themes/.github/java-upgrade/20260328140151"
+}}).
+2026-03-28T14:26:05.934Z [INFO] ----------------------invoked report_event----------------------
