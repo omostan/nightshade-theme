@@ -123,6 +123,7 @@ jobs:
 
       # ── 9. (Optional) Sign plugin ─────────────────────────────────────────
       - name: Sign plugin
+        if: ${{ secrets.CERTIFICATE_CHAIN != '' && secrets.PRIVATE_KEY != '' && secrets.PRIVATE_KEY_PASSWORD != '' }}
         run: ./gradlew signPlugin
         env:
           CERTIFICATE_CHAIN: ${{ secrets.CERTIFICATE_CHAIN }}
@@ -131,6 +132,7 @@ jobs:
 
       # ── 10. (Optional) Publish to JetBrains Marketplace ────────────────────
       - name: Publish plugin to Marketplace
+        if: ${{ secrets.PUBLISH_TOKEN != '' }}
         run: ./gradlew publishPlugin
         env:
           PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
