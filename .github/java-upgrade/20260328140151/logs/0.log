@@ -553,3 +553,94 @@ Configuration cache entry reused.
   "message": "Event 'buildCompleted' reported!\nSession ID: 20260328140151,\nSession Dir: /Users/stan/app-dev/JetBrains/Plugins/Themes/.github/java-upgrade/20260328140151"
 }}).
 2026-03-28T14:26:05.934Z [INFO] ----------------------invoked report_event----------------------
+2026-03-28T14:27:17.722Z [INFO] ----------------------invoke report_event----------------------
+2026-03-28T14:27:17.722Z [INFO] [Tool.invoke]({name: report_event, input: {
+  "sessionId": "20260328140151",
+  "projectPath": "/Users/stan/app-dev/JetBrains/Plugins/Themes",
+  "event": "upgradeValidationCompleted",
+  "status": "succeeded",
+  "phase": "execute",
+  "details": {}
+}}).
+2026-03-28T14:27:17.722Z [INFO] [Tool.invoke] do invoke.
+2026-03-28T14:27:17.722Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'upgradeValidationCompleted' reported!\nSession ID: 20260328140151,\nSession Dir: /Users/stan/app-dev/JetBrains/Plugins/Themes/.github/java-upgrade/20260328140151"
+}}).
+2026-03-28T14:27:17.722Z [INFO] ----------------------invoked report_event----------------------
+2026-03-28T14:27:23.302Z [INFO] ----------------------invoke report_event----------------------
+2026-03-28T14:27:23.303Z [INFO] [Tool.invoke]({name: report_event, input: {
+  "sessionId": "20260328140151",
+  "projectPath": "/Users/stan/app-dev/JetBrains/Plugins/Themes",
+  "event": "planExecutionCompleted",
+  "status": "succeeded",
+  "phase": "execute"
+}}).
+2026-03-28T14:27:23.303Z [INFO] [Tool.invoke] do invoke.
+2026-03-28T14:27:23.320Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'planExecutionCompleted' reported!\nSession ID: 20260328140151,\nSession Dir: /Users/stan/app-dev/JetBrains/Plugins/Themes/.github/java-upgrade/20260328140151"
+}}).
+2026-03-28T14:27:23.320Z [INFO] ----------------------invoked report_event----------------------
+2026-03-28T14:28:19.957Z [INFO] ----------------------invoke validate_cves_for_java----------------------
+2026-03-28T14:28:19.958Z [INFO] [Tool.invoke]({name: validate_cves_for_java, input: {
+  "sessionId": "20260328140151",
+  "projectPath": "/Users/stan/app-dev/JetBrains/Plugins/Themes",
+  "dependencies": [
+    "org.jetbrains.compose.hot-reload:hot-reload-agent:1.1.0-alpha03",
+    "org.jetbrains.intellij.plugins:verifier-cli:1.401",
+    "org.jetbrains:marketplace-zip-signer:0.1.43"
+  ]
+}}).
+2026-03-28T14:28:19.958Z [INFO] [Tool.invoke] do invoke.
+2026-03-28T14:28:19.958Z [INFO] Project /Users/stan/app-dev/JetBrains/Plugins/Themes is not a maven project, try to get java version from gradle
+2026-03-28T14:28:19.961Z [INFO] Try to get java version from gradle config files: /Users/stan/app-dev/JetBrains/Plugins/Themes/gradle.properties,/Users/stan/app-dev/JetBrains/Plugins/Themes/build.gradle.kts
+2026-03-28T14:28:19.962Z [INFO] Project java version: 21
+2026-03-28T14:28:19.962Z [ERROR] Unsupported project type: intellij. Only Maven, Maven Wrapper, and Gradle Wrapper projects are supported.
+2026-03-28T14:28:19.962Z [ERROR] Failed to create build tool for telemetry at /Users/stan/app-dev/JetBrains/Plugins/Themes: UserError: Unsupported project type: intellij. Only Maven, Maven Wrapper, and Gradle Wrapper projects are supported. Please choose a valid supported project
+    at uEs (/Users/stan/Library/Application Support/JetBrains/IntelliJIdea2026.1/plugins/appmod-intellij/mcp-server/dist/entrypoints/index.js:352:1365)
+    at async pEs (/Users/stan/Library/Application Support/JetBrains/IntelliJIdea2026.1/plugins/appmod-intellij/mcp-server/dist/entrypoints/index.js:352:4222)
+    at async r_s.doInvoke (/Users/stan/Library/Application Support/JetBrains/IntelliJIdea2026.1/plugins/appmod-intellij/mcp-server/dist/entrypoints/index.js:462:975)
+    at async r_s.invoke (/Users/stan/Library/Application Support/JetBrains/IntelliJIdea2026.1/plugins/appmod-intellij/mcp-server/dist/entrypoints/index.js:307:2852)
+    at async /Users/stan/Library/Application Support/JetBrains/IntelliJIdea2026.1/plugins/appmod-intellij/mcp-server/dist/entrypoints/index.js:468:4547
+    at async JDe.executeToolHandler (/Users/stan/Library/Application Support/JetBrains/IntelliJIdea2026.1/plugins/appmod-intellij/mcp-server/dist/entrypoints/index.js:8775:42362)
+    at async /Users/stan/Library/Application Support/JetBrains/IntelliJIdea2026.1/plugins/appmod-intellij/mcp-server/dist/entrypoints/index.js:8775:40928
+    at async s (/Users/stan/Library/Application Support/JetBrains/IntelliJIdea2026.1/plugins/appmod-intellij/mcp-server/dist/entrypoints/index.js:8775:30227)
+2026-03-28T14:28:19.962Z [INFO] Getting CVEs for dependencies: org.jetbrains.compose.hot-reload:hot-reload-agent:1.1.0-alpha03,org.jetbrains.intellij.plugins:verifier-cli:1.401,org.jetbrains:marketplace-zip-signer:0.1.43
+2026-03-28T14:28:19.963Z [INFO] getting CVEs for dependencies:
+ - org.jetbrains.compose.hot-reload:hot-reload-agent:1.1.0-alpha03
+  - org.jetbrains.intellij.plugins:verifier-cli:1.401
+  - org.jetbrains:marketplace-zip-signer:0.1.43...
+2026-03-28T14:28:19.963Z [INFO] getting gitHub access token...
+2026-03-28T14:28:19.963Z [ERROR] Failed to get GitHub access token to validate CVEs for the given dependencies.
+2026-03-28T14:28:19.963Z [INFO] Processing batch 1/1, size: 3
+2026-03-28T14:28:19.963Z [INFO] Proxy configuration: HTTPS_PROXY=(not set), HTTP_PROXY=(not set), NO_PROXY=(not set), NODE_EXTRA_CA_CERTS=(not set), vscode http.proxy=(not set), hasProxy=false
+2026-03-28T14:28:19.963Z [INFO] No proxy detected, using direct connection.
+2026-03-28T14:28:19.964Z [INFO] listing CVEs from GitHub for dependencies [
+  "org.jetbrains.compose.hot-reload:hot-reload-agent:1.1.0-alpha03",
+  "org.jetbrains.intellij.plugins:verifier-cli:1.401",
+  "org.jetbrains:marketplace-zip-signer:0.1.43"
+]
+2026-03-28T14:28:21.230Z [INFO] Fetched 0 total advisories across all pages
+2026-03-28T14:28:21.230Z [INFO] grouping CVEs and finding max patched version by dep...
+2026-03-28T14:28:21.231Z [INFO] done getting 0 CVEs for 3 dependencies
+2026-03-28T14:28:21.231Z [INFO] calculating patched version by dep...
+2026-03-28T14:28:21.231Z [INFO] finished getting CVEs for dependencies.
+2026-03-28T14:28:21.231Z [INFO] Found 0 dependencies with known CVEs
+2026-03-28T14:28:21.232Z [INFO] No known CVEs that need to be fixed are found for dependencies: org.jetbrains.compose.hot-reload:hot-reload-agent:1.1.0-alpha03,org.jetbrains.intellij.plugins:verifier-cli:1.401,org.jetbrains:marketplace-zip-signer:0.1.43
+2026-03-28T14:28:21.232Z [INFO] [Tool.invoke]({result: {
+  "message": "No known CVEs that need to be fixed are found for the given dependencies."
+}}).
+2026-03-28T14:28:21.232Z [INFO] ----------------------invoked validate_cves_for_java----------------------
+2026-03-28T14:33:08.401Z [INFO] ----------------------invoke report_event----------------------
+2026-03-28T14:33:08.401Z [INFO] [Tool.invoke]({name: report_event, input: {
+  "sessionId": "20260328140151",
+  "projectPath": "/Users/stan/app-dev/JetBrains/Plugins/Themes",
+  "event": "summaryGenerated",
+  "status": "succeeded",
+  "phase": "summarize",
+  "message": "Java 21 LTS toolchain successfully declared in build.gradle.kts. Clean build with JDK 21 confirmed successful. No CVEs found. No tests in project."
+}}).
+2026-03-28T14:33:08.401Z [INFO] [Tool.invoke] do invoke.
+2026-03-28T14:33:08.417Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'summaryGenerated' reported!\nSession ID: 20260328140151,\nSession Dir: /Users/stan/app-dev/JetBrains/Plugins/Themes/.github/java-upgrade/20260328140151"
+}}).
+2026-03-28T14:33:08.417Z [INFO] ----------------------invoked report_event----------------------
