@@ -644,3 +644,10 @@ Configuration cache entry reused.
   "message": "Event 'summaryGenerated' reported!\nSession ID: 20260328140151,\nSession Dir: /Users/stan/app-dev/JetBrains/Plugins/Themes/.github/java-upgrade/20260328140151"
 }}).
 2026-03-28T14:33:08.417Z [INFO] ----------------------invoked report_event----------------------
+2026-03-28T14:52:51.641Z [INFO] ----------------------invoke list_jdks----------------------
+2026-03-28T14:52:51.641Z [INFO] [Tool.invoke]({name: list_jdks, input: {}}).
+2026-03-28T14:52:51.641Z [INFO] [Tool.invoke] do invoke.
+2026-03-28T14:52:51.666Z [INFO] [Tool.invoke]({result: {
+  "message": "We found following jdks in your system:\n\n1. Java 21.0.8\n   📁 Path: /Users/stan/.jdk/jdk-21.0.8/jdk-21.0.8+9/Contents/Home/bin\n   🏷️ Source: install\n\n2. Java 24.0.2\n   📁 Path: /Users/stan/Library/Java/JavaVirtualMachines/temurin-24.0.2/Contents/Home/bin\n   🏷️ Source: others\n\n3. Java 25.0.2\n   📁 Path: /Applications/IntelliJ IDEA.app/Contents/jbr/Contents/Home/bin\n   🏷️ Source: JAVA_HOME\n\nTotal: 3 JDK installation(s) found"
+}}).
+2026-03-28T14:52:51.666Z [INFO] ----------------------invoked list_jdks----------------------

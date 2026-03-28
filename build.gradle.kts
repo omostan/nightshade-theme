@@ -59,4 +59,11 @@ extensions.getByName("intellijPlatform").withGroovyBuilder {
     "publishing" {
         setProperty("token", providers.environmentVariable("PUBLISH_TOKEN"))
     }
+    // Plugin verification — verify against the recommended IDE version(s) for the
+    // configured platformType/platformVersion (resolved from defaultRepositories).
+    "pluginVerification" {
+        "ides" {
+            "recommended"()
+        }
+    }
 }
