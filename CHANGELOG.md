@@ -16,7 +16,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Changed
 - Updated release workflow configuration (`release.yml`).
 
-## [1.0.0] – 2025-03-25
+## [1.0.0] – 2026-03-25
 
 ### Added
 - Initial release of Nightshade Theme with deep purple and elegant dark interface.
@@ -30,4 +30,3 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 [Unreleased]: https://github.com/omostan/nightshade-theme/compare/v1.0.1...HEAD
 [1.0.1]: https://github.com/omostan/nightshade-theme/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/omostan/nightshade-theme/releases/tag/v1.0.0
-
