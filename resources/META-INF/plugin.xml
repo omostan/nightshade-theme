@@ -2,7 +2,7 @@
 <idea-plugin>
     <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
     <id>com.github.omostan.nightshade-theme</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-name -->
@@ -33,6 +33,11 @@
     <!-- Short summary of new features and bugfixes in the latest plugin version.
          Displayed on the Plugin Page and IDE Plugin Manager. Simple HTML elements can be included between <![CDATA[  ]]> tags. -->
     <change-notes><![CDATA[
+        <b>1.0.1</b><br>
+        <ul>
+            <li>Fixed: Renamed <code>Nightshade.xml</code> to <code>nightshade.xml</code> for case-sensitive filesystem compatibility.</li>
+            <li>Updated release workflow configuration.</li>
+        </ul>
         <b>1.0.0</b><br>
         <ul>
             <li>Initial release of Nightshade Theme with deep purple and elegant dark interface.</li>
