@@ -32,14 +32,18 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: '8.11.1'    # used when no wrapper JAR is present
+          gradle-version: wrapper
           cache-read-only: ${{ github.ref != 'refs/heads/main' }}
 
-      # ── 4. Build ─────────────────────────────────────────────────────────
-      - name: Build plugin
-        run: gradle buildPlugin
+      # ── 4. Guard: Print wrapper Gradle version ──────────────────────────
+      - name: Print Gradle wrapper version
+        run: ./gradlew --version
 
-      # ── 5. Artifact ──────────────────────────────────────────────────────
+      # ── 5. Build ─────────────────────────────────────────────────────────
+      - name: Build plugin
+        run: ./gradlew buildPlugin
+
+      # ── 6. Artifact ──────────────────────────────────────────────────────
       - name: Upload plugin artifact
         uses: actions/upload-artifact@v4
         with:

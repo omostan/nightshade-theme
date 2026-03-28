@@ -58,13 +58,17 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: '8.11.1'
+          gradle-version: wrapper
 
-      # ── 4. Build ─────────────────────────────────────────────────────────
+      # ── 4. Guard: Print wrapper Gradle version ──────────────────────────
+      - name: Print Gradle wrapper version
+        run: ./gradlew --version
+
+      # ── 5. Build ─────────────────────────────────────────────────────────
       - name: Build plugin
-        run: gradle buildPlugin
+        run: ./gradlew buildPlugin
 
-      # ── 5. Resolve metadata ───────────────────────────────────────────────
+      # ── 6. Resolve metadata ───────────────────────────────────────────────
       - name: Get plugin version
         id: meta
         run: |
@@ -72,7 +76,7 @@ jobs:
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
           echo "zip_name=nightshade-${VERSION}.zip" >> "$GITHUB_OUTPUT"
 
-      # ── 6. Guard: Tag must match pluginVersion ────────────────────────────
+      # ── 7. Guard: Tag must match pluginVersion ────────────────────────────
       - name: Validate tag matches pluginVersion
         run: |
           set -euo pipefail
@@ -98,7 +102,7 @@ jobs:
 
           echo "Tag/version check passed: $ACTUAL_TAG"
 
-      # ── 7. GitHub Release ─────────────────────────────────────────────────
+      # ── 8. GitHub Release ─────────────────────────────────────────────────
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
@@ -117,17 +121,17 @@ jobs:
           generate_release_notes: true
           fail_on_unmatched_files: true
 
-      # ── 8. (Optional) Sign plugin ─────────────────────────────────────────
+      # ── 9. (Optional) Sign plugin ─────────────────────────────────────────
       - name: Sign plugin
-        run: gradle signPlugin
+        run: ./gradlew signPlugin
         env:
           CERTIFICATE_CHAIN: ${{ secrets.CERTIFICATE_CHAIN }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           PRIVATE_KEY_PASSWORD: ${{ secrets.PRIVATE_KEY_PASSWORD }}
 
-      # ── 9. (Optional) Publish to JetBrains Marketplace ────────────────────
+      # ── 10. (Optional) Publish to JetBrains Marketplace ────────────────────
       - name: Publish plugin to Marketplace
-        run: gradle publishPlugin
+        run: ./gradlew publishPlugin
         env:
           PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
           CERTIFICATE_CHAIN: ${{ secrets.CERTIFICATE_CHAIN }}
