@@ -28,15 +28,6 @@ java {
     }
 }
 
-// Point the resources source set at the project's top-level resources/ folder
-// so Gradle packages it exactly the same way IntelliJ IDEA's artifact builder does.
-sourceSets {
-    main {
-        resources {
-            srcDirs("resources")
-        }
-    }
-}
 tasks {
     // No Java sources to compile
     compileJava { enabled = false }

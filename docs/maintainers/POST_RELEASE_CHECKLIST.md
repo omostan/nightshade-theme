@@ -24,7 +24,7 @@ Use this checklist immediately after pushing `vX.Y.Z` and after the `Release` wo
 
 ## 4) Repository hygiene
 
-- Confirm `CHANGELOG.md` and `resources/META-INF/plugin.xml` match the released version.
+- Confirm `CHANGELOG.md` and `src/main/resources/META-INF/plugin.xml` match the released version.
 - Confirm `gradle.properties` `pluginVersion` is aligned with the latest release.
 - Add any release follow-up tasks to Issues (if needed).
 

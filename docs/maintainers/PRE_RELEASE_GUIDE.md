@@ -217,8 +217,8 @@ Use exit codes in automated pipelines:
 - Try: `ls -la build/libs/nightshade*.jar`
 
 ### "plugin.xml: FAIL" / "theme files: FAIL"
-- Verify `resources/META-INF/plugin.xml` exists
-- Verify `resources/theme/` files exist
+- Verify `src/main/resources/META-INF/plugin.xml` exists
+- Verify `src/main/resources/theme/` files exist
 - Check artifact configuration in `.idea/artifacts/nightshade_jar.xml`
 
 ### "ZIP exists: FAIL"
