@@ -35,7 +35,7 @@ If you prefer to install manually:
 
 ## Preview
 
-![Nightshade Theme Preview](resources/images/nightshadeTheme_dark.png)
+![Nightshade Theme Preview](src/main/resources/images/nightshadeTheme_dark.png)
 
 ## Requirements
 
