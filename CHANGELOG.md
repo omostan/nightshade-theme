@@ -8,6 +8,11 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [1.0.3] – 2026-09-19
+
+### Fixed
+- Corrected the Marketplace preview image URLs so the thumbnail and full-size image display properly.
+
 ## [1.0.2] – 2026-03-28
 
 ### Changed
@@ -32,7 +37,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Polished HTML markup for strict Marketplace compatibility.
 - Comprehensive README with installation and feature documentation.
 
-[Unreleased]: https://github.com/omostan/nightshade-theme/compare/v1.0.2...HEAD
+[Unreleased]: https://github.com/omostan/nightshade-theme/compare/v1.0.3...HEAD
+[1.0.3]: https://github.com/omostan/nightshade-theme/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/omostan/nightshade-theme/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/omostan/nightshade-theme/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/omostan/nightshade-theme/releases/tag/v1.0.0

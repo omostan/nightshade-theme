@@ -2,7 +2,7 @@
 <idea-plugin>
     <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
     <id>com.github.omostan.nightshade-theme</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-name -->
@@ -17,7 +17,7 @@
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-description -->
     <description><![CDATA[
-        <p><a href="https://raw.githubusercontent.com/omostan/nightshade-theme/main/resources/images/nightshadeTheme_dark.png"><img src="https://raw.githubusercontent.com/omostan/nightshade-theme/main/resources/images/nightshadeTheme_dark_thumb.png" alt="Nightshade Theme Preview" width="400"/></a></p>
+        <p><a href="https://raw.githubusercontent.com/omostan/nightshade-theme/main/src/main/resources/images/nightshadeTheme_dark.png"><img src="https://raw.githubusercontent.com/omostan/nightshade-theme/main/src/main/resources/images/nightshadeTheme_dark_thumb.png" alt="Nightshade Theme Preview" width="400"/></a></p>
         <p><b>Nightshade Theme</b> is a custom dark theme for JetBrains IDEs, inspired by the beauty of night and the elegance of shadows.</p>
         <p><b>Features:</b></p>
         <ul>
@@ -33,6 +33,10 @@
     <!-- Short summary of new features and bugfixes in the latest plugin version.
          Displayed on the Plugin Page and IDE Plugin Manager. Simple HTML elements can be included between <![CDATA[  ]]> tags. -->
     <change-notes><![CDATA[
+        <b>1.0.3</b><br>
+        <ul>
+            <li>Corrected the Marketplace preview image URLs so the thumbnail and full-size image display properly.</li>
+        </ul>
         <b>1.0.2</b><br>
         <ul>
             <li>Improved compatibility metadata to support the full 2025.2 IDE build line.</li>
@@ -40,6 +44,7 @@
         <b>1.0.1</b><br>
         <ul>
             <li>Fixed: Renamed <code>Nightshade.xml</code> to <code>nightshade.xml</code> for case-sensitive filesystem compatibility.</li>
+            <li>Updated release workflow configuration (`release.yml`).</li>
         </ul>
         <b>1.0.0</b><br>
         <ul>
