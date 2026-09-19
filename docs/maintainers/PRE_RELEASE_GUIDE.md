@@ -54,7 +54,7 @@ After validation, the script prints an exact artifact summary showing:
 
 | Code | Meaning                 | Action                                               |
 |------|-------------------------|------------------------------------------------------|
-| `0`  | Build + Validation PASS | Ready to release ✓                                   |
+| `0`  | Build + Validation PASS | Ready to release ✓                                  |
 | `1`  | Build FAILED            | Fix Gradle errors, re-run script                     |
 | `2`  | Validation FAILED       | Fix artifact issues (see validation output)          |
 | `64` | Invalid usage           | Remove extra arguments and re-run `./pre-release.sh` |
